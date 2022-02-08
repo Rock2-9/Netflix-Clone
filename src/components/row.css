@@ -1,0 +1,28 @@
+.movie_large_content {
+  display: flex;
+  height: 150px;
+  object-fit: contain;
+  margin: 4px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+.movie_content {
+  display: flex;
+  height: 100px;
+  object-fit: contain;
+  margin: 4px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+.movie_content::-webkit-scrollbar {
+  display: none;
+}
+.movie_large_content::-webkit-scrollbar {
+  display: none;
+}
+img {
+  margin: 4px;
+}
+img:hover {
+  transform: scale(1.08);
+}
