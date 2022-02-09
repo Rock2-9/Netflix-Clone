@@ -3,7 +3,7 @@ import "./row.css";
 
 function Row(props) {
   const { category_url, title, isLarge } = props;
-  const [movie, setMovie] = useState({ img_url: [] });
+  const [movie, setMovie] = useState({ img_url: [], movie_title: [] });
   const base_url = "https://api.themoviedb.org/3";
   const fetchUrl = async () => {
     const request = await fetch(`${base_url}${category_url}`);
@@ -14,11 +14,8 @@ function Row(props) {
     const poster_path = parsedData.results.map((e) => {
       return e.poster_path;
     });
-    console.log(movie_title);
 
-    setMovie({ img_url: poster_path });
-
-    console.log(movie.img_url);
+    setMovie({ img_url: poster_path, movie_title: movie_title });
   };
 
   useEffect(() => {

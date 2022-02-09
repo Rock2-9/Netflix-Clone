@@ -1,10 +1,11 @@
 import "./App.css";
+import Banner from "./components/Banner";
 import Row from "./components/Row";
 import requests from "./requests";
 function App() {
   return (
     <div className="App">
-      <h1>Making Netflix Clone</h1>
+      <Banner />
       <Row
         category_url={requests.fetchNetflixOriginal}
         title="NETFLIX ORIGINALS"
