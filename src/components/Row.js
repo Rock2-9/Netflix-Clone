@@ -28,7 +28,11 @@ function Row(props) {
       <div className="movie">
         <div className={isLarge ? "movie_large_content" : "movie_content"}>
           {movie.img_url.map((x) => (
-            <img src={`https://image.tmdb.org/t/p/w500${x}`} alt="" />
+            <img
+              className="img_row"
+              src={`https://image.tmdb.org/t/p/w500${x}`}
+              alt=""
+            />
           ))}
         </div>
       </div>
